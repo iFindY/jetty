@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'application'
+}
+
+group 'de.arkadi'
+version '1.0-SNAPSHOT'
+mainClassName = 'Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.27'
+//    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.27'
+//    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.27'
+//    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.27'
+//    compile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.4.14.v20181114', ext: 'pom'
+
+    compile "org.jboss.resteasy:resteasy-jaxrs:3.5.0.Final"
+    compile "org.jboss.resteasy:resteasy-jackson2-provider:3.5.0.Final"
+    compile "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.4"
+    compile "org.jboss.resteasy:resteasy-undertow:3.1.0.Final"
+    compile "org.jboss.resteasy:resteasy-cache-core:3.5.0.Final"
+    compile "io.undertow:undertow-core:2.0.1.Final"
+    compile "io.undertow:undertow-servlet:1.4.10.Final"
+    compile "com.google.guava:guava:24.0-jre"
+    compile "org.apache.commons:commons-lang3:3.7"
+    compile "redis.clients:jedis:2.9.0"
+
+}
